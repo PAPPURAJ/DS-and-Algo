@@ -64,6 +64,20 @@ void display(){
     
 }
 
+void deleteFirst(){
+    head=head->next;
+    head->prev=NULL;
+}
+
+void deleteLast(){
+    struct Node *temp=head;
+
+    while(temp->next->next!=NULL)
+        temp=temp->next;
+
+    temp->next=NULL;
+}
+
 int main(){
     
     for (size_t i = 0; i < 10; i++)
@@ -74,9 +88,11 @@ int main(){
     display();
 
     insertLast(60);
+    deleteFirst();
+    display();
+    deleteLast();
     display();
 
-    insertFirst(70);
-    display();
+
     return 0;
 }
