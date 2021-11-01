@@ -2,6 +2,8 @@
 using namespace std;
 #define nl '\n'
 
+
+
 struct Node{
     int value;
     struct Node *next,*prev;
